@@ -38,7 +38,7 @@ RPM do plików standardu RDF.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" LFLAGS="-s" \
+CFLAGS="$RPM_OPT_FLAGS -I/usr/include/rpm" LFLAGS="-s" \
 ./configure %{_target_platform} \
 	--prefix=/usr \
 	--sysconfdir=/etc
