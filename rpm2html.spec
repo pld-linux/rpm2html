@@ -1,13 +1,12 @@
 Summary:	Translates rpm database into HTML and RDF info
 Summary(pl):	Generuje informacje o bazie RPM formacie HTML
 Name:		rpm2html 
-Version:	1.4
+Version:	1.7
 Release:	1
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 License:	W3C Copyright (BSD like)
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
-Patch0:		rpm2html-DESTDIR.patch
 URL:		http://rufus.w3.org/linux/rpm2html/
 BuildRequires:	popt-devel
 BuildRequires:	rpm-devel
@@ -36,9 +35,9 @@ pakiet z sieci i próbujesz go zainstalowaæ:
 
 %prep
 %setup -q
-%patch -p1
 
 %build
+autoconf
 %configure
 %{__make}
 
