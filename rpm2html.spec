@@ -3,16 +3,16 @@ Summary(es):	Genera HTML y información RDF a partir de un banco de datos rpm
 Summary(pl):	Generuje informacje o bazie RPM formacie HTML
 Summary(pt_BR):	Gera HTML e informação RDF a partir de um banco de dados RPM
 Name:		rpm2html
-Version:	1.7
-Release:	2
+Version:	1.8.2
+Release:	1
 License:	W3C Copyright (BSD like)
 Group:		Applications/System
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
-# Source0-md5:	3efc3da51da8c38495c368937d8ad25d
-Patch0:		%{name}-rpmopen.patch
+# Source0-md5:	99e2c0c43a7c9dab996ed15291dbedc1
 URL:		http://rpmfind.net/linux/rpm2html/
 BuildRequires:	autoconf
-BuildRequires:	libxml-devel
+BuildRequires:	automake
+BuildRequires:	libxml2-devel
 BuildRequires:	popt-devel
 BuildRequires:	rpm-devel
 BuildRequires:	zlib-devel
@@ -61,9 +61,9 @@ deseja obter e instalar um pacote RPM:
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
+%{__aclocal}
 %{__autoconf}
 %configure \
 	--sysconfdir=%{_sysconfdir}
