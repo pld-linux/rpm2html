@@ -39,7 +39,7 @@ RPM do plików standardu RDF.
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" LFLAGS="-s" \
-./configure %{_target} \
+./configure %{_target_platform} \
 	--prefix=/usr \
 	--sysconfdir=/etc
 make
