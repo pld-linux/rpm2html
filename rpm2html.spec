@@ -1,5 +1,7 @@
 Summary:	Translates rpm database into HTML and RDF info
 Summary(pl):	Generuje informacje o bazie RPM formacie HTML
+Summary(pt_BR):	Gera HTML e informação RDF a partir de um banco de dados RPM
+Summary(es):	Genera HTML y información RDF a partir de un banco de datos rpm
 Name:		rpm2html 
 Version:	1.7
 Release:	1
@@ -8,7 +10,8 @@ Group:		Applications/System
 Group(de):	Applikationen/System
 Group(pl):	Aplikacje/System
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
-URL:		http://rufus.w3.org/linux/rpm2html/
+Patch0:		%{name}-rpmopen.patch
+URL:		http://rpmfind.net/linux/rpm2html/
 BuildRequires:	popt-devel
 BuildRequires:	rpm-devel
 BuildRequires:	libxml-devel
@@ -35,12 +38,34 @@ pakiet z sieci i próbujesz go zainstalowaæ:
      hiper-po³±czeñ. Rpm2html potrafi teraz zrzuciæ metadane wystepuj±ce w
      pakietach RPM do plików standardu RDF.
 
+%description -l pt_BR
+Rpm2html tenta resolver dois grandes problemas que ocorrem
+quando se deseja obter e instalar um pacote RPM:
+   - ele provê mais informações além do nome do arquivo antes
+     de instalar o pacote;
+   - ele tenta resolver as dependências analisando tudo que um
+     conjunto de RPMs fornece e requer. Ele mostra as referências
+     cruzadas como links html.
+Rpm2html pode agora fornecer os metadados associados a pacotes
+RPM em formato RDF padrão.
+
+%description -l es
+Rpm2html intenta resolver uno de los grandes problemas que ocurren
+cuando se desea obtener y instalar un paquete RPM: - provee más
+información, además del nombre del archivo antes de instalar
+el paquete; - intenta resolver las dependencias analizando todo
+que un conjunto de RPMs ofrece y requiere. Enseña las referencias
+cruzadas como links html.  Rpm2html puede ahora ofrecer los metadatos
+asociados a paquetes RPM en formato RDF padrón.
+
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 autoconf
-%configure
+%configure \
+	--sysconfdir=%{_sysconfdir}
 %{__make}
 
 %install
