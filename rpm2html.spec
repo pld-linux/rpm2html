@@ -39,7 +39,6 @@ pakiet z sieci i próbujesz go zainstalowaæ:
 %patch -p1
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -48,8 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	CHANGES BUGS PRINCIPLES README \
+gzip -9nf CHANGES BUGS PRINCIPLES README \
 	rpm2html-*config
 
 %clean
