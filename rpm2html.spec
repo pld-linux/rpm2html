@@ -8,6 +8,7 @@ Release:	2
 License:	W3C Copyright (BSD like)
 Group:		Applications/System
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
+# Source0-md5:	3efc3da51da8c38495c368937d8ad25d
 Patch0:		%{name}-rpmopen.patch
 URL:		http://rpmfind.net/linux/rpm2html/
 BuildRequires:	autoconf
