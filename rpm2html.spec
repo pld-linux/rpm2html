@@ -2,7 +2,7 @@ Summary:	Translates rpm database into HTML and RDF info
 Summary(pl):	Generuje informacje o bazie RPM formacie HTML
 Name:		rpm2html 
 Version:	1.2
-Release:	1
+Release:	2
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
@@ -61,17 +61,21 @@ install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/rpm2html
 install rpm2html.config $RPM_BUILD_ROOT%{_sysconfdir}
 install rpm2html.1 $RPM_BUILD_ROOT%{_mandir}/man1/rpm2html.1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	CHANGES BUGS PRINCIPLES README \
+	rpm2html-cdrom.config rpm2html-en.config \
+	rpm2html.config.mirrors rpm2html-fr.config \
+	rpm2html.config.resources rpm2html-rdf.config
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES BUGS PRINCIPLES README  
-%doc rpm2html-cdrom.config rpm2html-en.config
-%doc rpm2html.config.mirrors rpm2html-fr.config
-%doc rpm2html.config.resources rpm2html-rdf.config
+%doc {CHANGES,BUGS,PRINCIPLES,README}.gz
+%doc {rpm2html-cdrom.config,rpm2html-en.config}.gz
+%doc {rpm2html.config.mirrors,rpm2html-fr.config}.gz
+%doc {rpm2html.config.resources,rpm2html-rdf.config}.gz
 
 %attr(755,root,root) %{_bindir}/rpm2html
 %dir %{_datadir}/rpm2html
