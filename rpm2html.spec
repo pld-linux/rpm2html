@@ -21,21 +21,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Rpm2html tries to solve 2 big problems one face when grabbing a RPM
 package from a mirror on the net and trying to install it:
-   - it gives more information than just the filename before installing
-     the package.
-   - it tries to solve the dependancy problem by analyzing all the
-     Provides and Requires of the set of RPMs. It shows the cross
-     references by the way of hypertext links. Rpm2html can now dump the
-     metadata associated to RPM packages into standard RDF files.
+- it gives more information than just the filename before installing
+  the package.
+- it tries to solve the dependancy problem by analyzing all the
+  Provides and Requires of the set of RPMs. It shows the cross
+  references by the way of hypertext links. Rpm2html can now dump the
+  metadata associated to RPM packages into standard RDF files.
 
 %description -l es
 Rpm2html intenta resolver uno de los grandes problemas que ocurren
 cuando se desea obtener y instalar un paquete RPM:
-   - provee más información, además del nombre del archivo antes de
-     instalar el paquete; intenta resolver las dependencias analizando todo
-     que un
-   - conjunto de RPMs ofrece y requiere. Enseña las referencias cruzadas
-     como links html.
+- provee más información, además del nombre del archivo antes de
+  instalar el paquete; intenta resolver las dependencias analizando todo
+  que un
+- conjunto de RPMs ofrece y requiere. Enseña las referencias cruzadas
+  como links html.
 
 Rpm2html puede ahora ofrecer los metadatos asociados a paquetes RPM en
 formato RDF padrón.
@@ -43,21 +43,21 @@ formato RDF padrón.
 %description -l pl
 Rpm2html próbuje rozwi±zaæ 2 wielkie problemy gdy chcesz ¶ci±gn±æ nowy
 pakiet z sieci i próbujesz go zainstalowaæ:
-   - daje wiêcej informacji ni¿ sama nazwa pakietu
-   - próbuje rozwi±zaæ problem zale¿no¶ci poprzez analizê wszystkich
-     Provides i Requires w grupie RPMów. Pokazuje zale¿no¶ci w formie
-     hiper-po³±czeñ. Rpm2html potrafi teraz zrzuciæ metadane wystêpuj±ce w
-     pakietach RPM do plików standardu RDF.
+- daje wiêcej informacji ni¿ sama nazwa pakietu
+- próbuje rozwi±zaæ problem zale¿no¶ci poprzez analizê wszystkich
+  Provides i Requires w grupie RPMów. Pokazuje zale¿no¶ci w formie
+  hiper-po³±czeñ. Rpm2html potrafi teraz zrzuciæ metadane wystêpuj±ce w
+  pakietach RPM do plików standardu RDF.
 
 %description -l pt_BR
 Rpm2html tenta resolver dois grandes problemas que ocorrem quando se
 deseja obter e instalar um pacote RPM:
-   - ele provê mais informações além do nome do arquivo antes de instalar
-     o pacote;
-   - ele tenta resolver as dependências analisando tudo que um conjunto
-     de RPMs fornece e requer. Ele mostra as referências cruzadas como
-     links html. Rpm2html pode agora fornecer os metadados associados a
-     pacotes RPM em formato RDF padrão.
+- ele provê mais informações além do nome do arquivo antes de instalar
+  o pacote;
+- ele tenta resolver as dependências analisando tudo que um conjunto
+  de RPMs fornece e requer. Ele mostra as referências cruzadas como
+  links html. Rpm2html pode agora fornecer os metadados associados a
+  pacotes RPM em formato RDF padrão.
 
 %prep
 %setup -q
