@@ -61,21 +61,24 @@ install %{SOURCE2} $RPM_BUILD_ROOT/usr/share/rpm2html
 install rpm2html.config $RPM_BUILD_ROOT/etc
 install rpm2html.1 $RPM_BUILD_ROOT/usr/man/man1/rpm2html.1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+	CHANGES BUGS PRINCIPLES README \
+	rpm2html-cdrom.config rpm2html-en.config \
+	rpm2html.config.mirrors rpm2html-fr.config \
+	rpm2html.config.resources rpm2html-rdf.config
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES BUGS PRINCIPLES README  
-%doc rpm2html-cdrom.config rpm2html-en.config
-%doc rpm2html.config.mirrors rpm2html-fr.config
-%doc rpm2html.config.resources rpm2html-rdf.config
+%doc {CHANGES,BUGS,PRINCIPLES,README}.gz  
+%doc {rpm2html-cdrom.config,rpm2html-en.config}.gz
+%doc {rpm2html.config.mirrors,rpm2html-fr.config}.gz
+%doc {rpm2html.config.resources,rpm2html-rdf.config}.gz
 
 %attr(755,root,root) /usr/bin/rpm2html
-%dir /usr/share/rpm2html
-/usr/share/rpm2html/*
+/usr/share/rpm2html
 
 %config %verify(not size mtime md5) /etc/rpm2html.config
 /usr/man/man1/*
