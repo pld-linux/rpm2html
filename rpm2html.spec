@@ -11,7 +11,7 @@ Source1:	msg-apache.pl
 Source2:	msg-apache.en
 URL:		http://rufus.w3.org/linux/rpm2html/
 BuildRequires:	rpm-devel
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Rpm2html tries to solve 2 big problems one face when
