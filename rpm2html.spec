@@ -73,15 +73,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf CHANGES BUGS PRINCIPLES README \
-	rpm2html-*config
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES BUGS PRINCIPLES README rpm2html-*config
 %attr(755,root,root) %{_bindir}/rpm2html
 %{_datadir}/rpm2html
 
