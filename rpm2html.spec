@@ -63,7 +63,7 @@ deseja obter e instalar um pacote RPM:
 %patch0 -p1
 
 %build
-autoconf
+%{__autoconf}
 %configure \
 	--sysconfdir=%{_sysconfdir}
 %{__make}
