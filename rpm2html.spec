@@ -42,7 +42,7 @@ RPM do plików standardu RDF.
 LFLAGS="-s"; export LFLAGS
 CFLAGS="$RPM_OPT_FLAGS -I/usr/include/rpm"; export CFLAGS
 %configure
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
