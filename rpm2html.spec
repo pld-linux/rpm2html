@@ -38,15 +38,15 @@ RPM do plików standardu RDF.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS -I/usr/include/rpm" LFLAGS="-s" \
-./configure %{_target_platform} \
-	--prefix=/usr \
-	--sysconfdir=/etc
+LFLAGS="-s"; export LFLAGS
+CFLAGS="$RPM_OPT_FLAGS -I/usr/include/rpm"; export CFLAGS
+%configure
 make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{etc,usr/{bin,man/man1,share/rpm2html}}
+install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_mandir}/man1} \
+	$RPM_BUILD_ROOT%{_datadir}/rpm2html
 
 install rpm2html $RPM_BUILD_ROOT%{_bindir}
 
@@ -58,7 +58,7 @@ install msg.pl $RPM_BUILD_ROOT%{_datadir}/rpm2html
 install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/rpm2html
 install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/rpm2html
 
-install rpm2html.config $RPM_BUILD_ROOT/etc
+install rpm2html.config $RPM_BUILD_ROOT%{_sysconfdir}
 install rpm2html.1 $RPM_BUILD_ROOT%{_mandir}/man1/rpm2html.1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
