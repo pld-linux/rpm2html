@@ -2,7 +2,7 @@ Summary:	Translates rpm database into HTML and RDF info
 Summary(es):	Genera HTML y información RDF a partir de un banco de datos rpm
 Summary(pl):	Generuje informacje o bazie RPM formacie HTML
 Summary(pt_BR):	Gera HTML e informação RDF a partir de um banco de dados RPM
-Name:		rpm2html 
+Name:		rpm2html
 Version:	1.7
 Release:	2
 License:	W3C Copyright (BSD like)
@@ -30,11 +30,11 @@ package from a mirror on the net and trying to install it:
 %description -l es
 Rpm2html intenta resolver uno de los grandes problemas que ocurren
 cuando se desea obtener y instalar un paquete RPM:
-   - provee más información, además del nombre del archivo antes de instalar
-     el paquete; intenta resolver las dependencias analizando todo que un
-   - conjunto de
-     RPMs ofrece y requiere. Enseña las referencias cruzadas como links
-     html.
+   - provee más información, además del nombre del archivo antes de
+     instalar el paquete; intenta resolver las dependencias analizando todo
+     que un
+   - conjunto de RPMs ofrece y requiere. Enseña las referencias cruzadas
+     como links html.
 
 Rpm2html puede ahora ofrecer los metadatos asociados a paquetes RPM en
 formato RDF padrón.
@@ -49,15 +49,14 @@ pakiet z sieci i próbujesz go zainstalowaæ:
      pakietach RPM do plików standardu RDF.
 
 %description -l pt_BR
-Rpm2html tenta resolver dois grandes problemas que ocorrem
-quando se deseja obter e instalar um pacote RPM:
-   - ele provê mais informações além do nome do arquivo antes
-     de instalar o pacote;
-   - ele tenta resolver as dependências analisando tudo que um
-     conjunto de RPMs fornece e requer. Ele mostra as referências
-     cruzadas como links html.
-Rpm2html pode agora fornecer os metadados associados a pacotes
-RPM em formato RDF padrão.
+Rpm2html tenta resolver dois grandes problemas que ocorrem quando se
+deseja obter e instalar um pacote RPM:
+   - ele provê mais informações além do nome do arquivo antes de instalar
+     o pacote;
+   - ele tenta resolver as dependências analisando tudo que um conjunto
+     de RPMs fornece e requer. Ele mostra as referências cruzadas como
+     links html. Rpm2html pode agora fornecer os metadados associados a
+     pacotes RPM em formato RDF padrão.
 
 %prep
 %setup -q
