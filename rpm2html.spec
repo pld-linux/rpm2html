@@ -5,11 +5,12 @@ Version:	1.2
 Release:	2
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
+License:	W3C Copyright (BSD like)
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
 Source1:	msg-apache.pl
 Source2:	msg-apache.en
 URL:		http://rufus.w3.org/linux/rpm2html/
-Copyright:	W3C Copyright (BSD like).
+BuildRequires:	rpm-devel
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
