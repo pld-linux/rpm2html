@@ -3,9 +3,10 @@ Summary(pl):	Generuje informacje o bazie RPM formacie HTML
 Name:		rpm2html 
 Version:	1.7
 Release:	1
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
 License:	W3C Copyright (BSD like)
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
 URL:		http://rufus.w3.org/linux/rpm2html/
 BuildRequires:	popt-devel
