@@ -1,0 +1,11 @@
+--- rpm2html-1.7/rpmopen.c.orig	Tue Oct  2 13:00:56 2001
++++ rpm2html-1.7/rpmopen.c	Tue Oct  2 13:01:09 2001
+@@ -50,7 +50,7 @@
+ getTagNumber(char *tag)
+ {
+     int i;
+-    const struct headerTagTableEntry_s *t;
++    const struct headerTagTableEntry *t;
+ 
+     for (i = 0, t = rpmTagTable; i < rpmTagTableSize; i++, t++) {
+         if (!strcasecmp(tag, t->name))
