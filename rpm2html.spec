@@ -67,7 +67,6 @@ rm -f missing mkinstalldirs
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-
 %configure \
 	--sysconfdir=%{_sysconfdir}
 %{__make}
