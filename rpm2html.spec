@@ -59,9 +59,9 @@ install %{SOURCE1} $RPM_BUILD_ROOT/usr/share/rpm2html
 install %{SOURCE2} $RPM_BUILD_ROOT/usr/share/rpm2html
 
 install rpm2html.config $RPM_BUILD_ROOT/etc
-install rpm2html.1 $RPM_BUILD_ROOT/usr/man/man1/rpm2html.1
+install rpm2html.1 $RPM_BUILD_ROOT%{_mandir}/man1/rpm2html.1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 /usr/share/rpm2html/*
 
 %config %verify(not size mtime md5) /etc/rpm2html.config
-/usr/man/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Wed Jan 20 1999 Artur Frysiak <wiget@usa.net>
