@@ -48,7 +48,7 @@ make
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/{etc,usr/{bin,man/man1,share/rpm2html}}
 
-install rpm2html $RPM_BUILD_ROOT/usr/bin
+install rpm2html $RPM_BUILD_ROOT%{_bindir}
 
 install msg.fr $RPM_BUILD_ROOT%{_datadir}/rpm2html
 install msg.es $RPM_BUILD_ROOT%{_datadir}/rpm2html
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc rpm2html.config.mirrors rpm2html-fr.config
 %doc rpm2html.config.resources rpm2html-rdf.config
 
-%attr(755,root,root) /usr/bin/rpm2html
+%attr(755,root,root) %{_bindir}/rpm2html
 %dir %{_datadir}/rpm2html
 %{_datadir}/rpm2html/*
 
