@@ -7,7 +7,7 @@ Version:	1.8.2
 Release:	1
 License:	W3C Copyright (BSD like)
 Group:		Applications/System
-Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
+Source0:	ftp://rpmfind.net/pub/rpm2html/%{name}-%{version}.tar.gz
 # Source0-md5:	99e2c0c43a7c9dab996ed15291dbedc1
 URL:		http://rpmfind.net/linux/rpm2html/
 BuildRequires:	autoconf
@@ -46,7 +46,7 @@ pakiet z sieci i próbujesz go zainstalowaæ:
    - daje wiêcej informacji ni¿ sama nazwa pakietu
    - próbuje rozwi±zaæ problem zale¿no¶ci poprzez analizê wszystkich
      Provides i Requires w grupie RPMów. Pokazuje zale¿no¶ci w formie
-     hiper-po³±czeñ. Rpm2html potrafi teraz zrzuciæ metadane wystepuj±ce w
+     hiper-po³±czeñ. Rpm2html potrafi teraz zrzuciæ metadane wystêpuj±ce w
      pakietach RPM do plików standardu RDF.
 
 %description -l pt_BR
@@ -63,8 +63,11 @@ deseja obter e instalar um pacote RPM:
 %setup -q
 
 %build
+rm -f missing mkinstalldirs
 %{__aclocal}
 %{__autoconf}
+%{__automake}
+
 %configure \
 	--sysconfdir=%{_sysconfdir}
 %{__make}
@@ -72,7 +75,8 @@ deseja obter e instalar um pacote RPM:
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
