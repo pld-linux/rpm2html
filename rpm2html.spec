@@ -50,13 +50,13 @@ install -d $RPM_BUILD_ROOT/{etc,usr/{bin,man/man1,share/rpm2html}}
 
 install rpm2html $RPM_BUILD_ROOT/usr/bin
 
-install msg.fr $RPM_BUILD_ROOT/usr/share/rpm2html
-install msg.es $RPM_BUILD_ROOT/usr/share/rpm2html
-install msg.de $RPM_BUILD_ROOT/usr/share/rpm2html
-install msg.pl $RPM_BUILD_ROOT/usr/share/rpm2html
+install msg.fr $RPM_BUILD_ROOT%{_datadir}/rpm2html
+install msg.es $RPM_BUILD_ROOT%{_datadir}/rpm2html
+install msg.de $RPM_BUILD_ROOT%{_datadir}/rpm2html
+install msg.pl $RPM_BUILD_ROOT%{_datadir}/rpm2html
 
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/share/rpm2html
-install %{SOURCE2} $RPM_BUILD_ROOT/usr/share/rpm2html
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/rpm2html
+install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/rpm2html
 
 install rpm2html.config $RPM_BUILD_ROOT/etc
 install rpm2html.1 $RPM_BUILD_ROOT%{_mandir}/man1/rpm2html.1
@@ -74,8 +74,8 @@ rm -rf $RPM_BUILD_ROOT
 %doc rpm2html.config.resources rpm2html-rdf.config
 
 %attr(755,root,root) /usr/bin/rpm2html
-%dir /usr/share/rpm2html
-/usr/share/rpm2html/*
+%dir %{_datadir}/rpm2html
+%{_datadir}/rpm2html/*
 
 %config %verify(not size mtime md5) /etc/rpm2html.config
 %{_mandir}/man1/*
