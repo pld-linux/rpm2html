@@ -7,8 +7,6 @@ Version:	1.7
 Release:	2
 License:	W3C Copyright (BSD like)
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://rufus.w3.org/pub/rpm2html/%{name}-%{version}.tar.gz
 Patch0:		%{name}-rpmopen.patch
 URL:		http://rpmfind.net/linux/rpm2html/
