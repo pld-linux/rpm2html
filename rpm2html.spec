@@ -79,17 +79,3 @@ rm -rf $RPM_BUILD_ROOT
 
 %config %verify(not size mtime md5) /etc/rpm2html.config
 %{_mandir}/man1/*
-
-%changelog
-* Wed Jan 20 1999 Artur Frysiak <wiget@usa.net>
-  [1.0-1d]
-- updated to 1.0
-- added msg-apache.{pl,en} messages files (for apache MultiView option 
-  support)
-
-* Sun Sep 27 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-  [0.99-2d]
-- start at the spec file prepared by A. Bagiñski <abagi@idk.com.pl>,
-- restricted ELF binaries permissions,
-- build against Tornado,
-- minor modifications.
