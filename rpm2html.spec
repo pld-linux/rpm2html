@@ -1,8 +1,8 @@
 Summary:	Translates rpm database into HTML and RDF info
 Summary(pl):	Generuje informacje o bazie RPM formacie HTML
 Name:		rpm2html 
-Version:	1.2
-Release:	2
+Version:	1.3
+Release:	1
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
 License:	W3C Copyright (BSD like)
