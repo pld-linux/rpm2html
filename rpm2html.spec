@@ -12,6 +12,7 @@ BuildRequires:	popt-devel
 BuildRequires:	rpm-devel
 BuildRequires:	libxml-devel
 BuildRequires:	zlib-devel
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
