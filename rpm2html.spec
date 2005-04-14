@@ -85,6 +85,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES BUGS PRINCIPLES README rpm2html-*config
 %attr(755,root,root) %{_bindir}/rpm2html
 %{_datadir}/rpm2html
-
-%config %verify(not size mtime md5) %{_sysconfdir}/rpm2html.config
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/rpm2html.config
 %{_mandir}/man1/*
