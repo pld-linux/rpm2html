@@ -1,7 +1,7 @@
 Summary:	Translates rpm database into HTML and RDF info
-Summary(es.UTF-8):   Genera HTML y información RDF a partir de un banco de datos rpm
-Summary(pl.UTF-8):   Generuje informacje o bazie RPM formacie HTML
-Summary(pt_BR.UTF-8):   Gera HTML e informação RDF a partir de um banco de dados RPM
+Summary(es.UTF-8):	Genera HTML y información RDF a partir de un banco de datos rpm
+Summary(pl.UTF-8):	Generuje informacje o bazie RPM formacie HTML
+Summary(pt_BR.UTF-8):	Gera HTML e informação RDF a partir de um banco de dados RPM
 Name:		rpm2html
 Version:	1.8.2
 Release:	1
